@@ -9,4 +9,4 @@ export function Auth(...roles: ValidRoles[]) {
       RoleProtected( ...roles),
       UseGuards( AuthGuard() , UserRoleGuard)
     );
-  }
+}
