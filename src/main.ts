@@ -25,7 +25,8 @@ async function main() {
   SwaggerModule.setup('api', app, document);
 
   const port = process.env.PORT || 3001
-  await app.listen(port);
+  app.enableCors()
+  await app.listen(port, "0.0.0.0");
   logger.log(`App is running on port ${ port }`)
 }
 main();
